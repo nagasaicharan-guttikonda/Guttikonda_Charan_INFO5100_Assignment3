@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UniversityManagementSystem">
+  <ClassDiagramComponents>
+    <Class name="EmployerDirectory" package="Model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="employer" type="String[]" visibility="package"/>
+        <Field name="employerList" type="List&lt;String&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getEmployerList" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="setEmployerList" returnType="void" visibility="public">
+          <Argument type="List&lt;String&gt;" name="employerList"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JobDetails" package="Model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="jobTitle" type="String" visibility="package"/>
+        <Field name="jobType" type="String" visibility="package"/>
+        <Field name="jobReq" type="String[]" visibility="package"/>
+        <Field name="payScale" type="int" visibility="package"/>
+        <Field name="postNum" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getJobTitle" returnType="String" visibility="public"/>
+        <Method name="setJobTitle" returnType="void" visibility="public">
+          <Argument type="String" name="jobTitle"/>
+        </Method>
+        <Method name="getJobType" returnType="String" visibility="public"/>
+        <Method name="setJobType" returnType="void" visibility="public">
+          <Argument type="String" name="jobType"/>
+        </Method>
+        <Method name="getJobReq" returnType="String[]" visibility="public"/>
+        <Method name="setJobReq" returnType="void" visibility="public">
+          <Argument type="String[]" name="jobReq"/>
+        </Method>
+        <Method name="getPayScale" returnType="int" visibility="public"/>
+        <Method name="setPayScale" returnType="void" visibility="public">
+          <Argument type="int" name="payScale"/>
+        </Method>
+        <Method name="getPostNum" returnType="int" visibility="public"/>
+        <Method name="setPostNum" returnType="void" visibility="public">
+          <Argument type="int" name="postNum"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JobDetailsList" package="Model" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="ja" type="ArrayList&lt;JobDetails&gt;" visibility="package"/>
+        <Field name="ea" type="HashMap&lt;EmployerDirectory, ArrayList&lt;JobDetails&gt;&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getJa" returnType="ArrayList&lt;JobDetails&gt;" visibility="public"/>
+        <Method name="setJa" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;JobDetails&gt;" name="ja"/>
+        </Method>
+        <Method name="getEa" returnType="HashMap&lt;EmployerDirectory, ArrayList&lt;JobDetails&gt;&gt;" visibility="public"/>
+        <Method name="setEa" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;EmployerDirectory, ArrayList&lt;JobDetails&gt;&gt;" name="ea"/>
+        </Method>
+        <Method name="addNewJob" returnType="JobDetails" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="College" package="info5100.university.example.college" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="collegeName" type="String" visibility="package"/>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="collegeMap" type="HashMap&lt;String, ArrayList&lt;Department&gt;&gt;" visibility="package"/>
+        <Field name="departmentList" type="ArrayList&lt;Department&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDepartmentList" returnType="ArrayList&lt;Department&gt;" visibility="public"/>
+        <Method name="setDepartmentList" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Department&gt;" name="departmentList"/>
+        </Method>
+        <Method name="getCollegeName" returnType="String" visibility="public"/>
+        <Method name="setCollegeName" returnType="void" visibility="public">
+          <Argument type="String" name="collegeName"/>
+        </Method>
+        <Method name="getCollegeMap" returnType="HashMap&lt;String, ArrayList&lt;Department&gt;&gt;" visibility="public"/>
+        <Method name="setCollegeMap" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;String, ArrayList&lt;Department&gt;&gt;" name="collegeMap"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Course" package="info5100.university.example.CourseCatalog" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="number" type="String" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="credits" type="int" visibility="package"/>
+        <Field name="price" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="numb"/>
+          <Argument type="int" name="ch"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCOurseNumber" returnType="String" visibility="public"/>
+        <Method name="getCourseName" returnType="String" visibility="public"/>
+        <Method name="getCoursePrice" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CourseCatalog" package="info5100.university.example.CourseCatalog" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="lastupdated" type="String" visibility="package"/>
+        <Field name="courselist" type="ArrayList&lt;Course&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Department" name="d"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCourseList" returnType="ArrayList&lt;Course&gt;" visibility="public"/>
+        <Method name="newCourse" returnType="Course" visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="nm"/>
+          <Argument type="int" name="cr"/>
+        </Method>
+        <Method name="getCourseByNumber" returnType="Course" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CourseLoad" package="info5100.university.example.CourseSchedule" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="semester" type="String" visibility="package"/>
+        <Field name="seatassignments" type="ArrayList&lt;SeatAssignment&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="newSeatAssignment" returnType="SeatAssignment" visibility="public">
+          <Argument type="CourseOffer" name="co"/>
+        </Method>
+        <Method name="registerStudent" returnType="void" visibility="public">
+          <Argument type="SeatAssignment" name="sa"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CourseOffer" package="info5100.university.example.CourseSchedule" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="course" type="Course" visibility="package"/>
+        <Field name="seatlist" type="ArrayList&lt;Seat&gt;" visibility="package"/>
+        <Field name="facultyassignment" type="FacultyAssignment" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Course" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="AssignAsTeacher" returnType="void" visibility="public">
+          <Argument type="FacultyProfile" name="fp"/>
+        </Method>
+        <Method name="getFacultyProfile" returnType="FacultyProfile" visibility="public"/>
+        <Method name="getCourseNumber" returnType="String" visibility="public"/>
+        <Method name="getCourseName" returnType="String" visibility="public"/>
+        <Method name="getCoursePrice" returnType="String" visibility="public"/>
+        <Method name="getTotalRevenueOfCourse" returnType="String" visibility="public"/>
+        <Method name="getNoOfSeats" returnType="String" visibility="public"/>
+        <Method name="generatSeats" returnType="void" visibility="public">
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="getEmptySeat" returnType="Seat" visibility="public"/>
+        <Method name="assignEmptySeat" returnType="SeatAssignment" visibility="public">
+          <Argument type="CourseLoad" name="cl"/>
+        </Method>
+        <Method name="getTotalCourseRevenues" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CourseSchedule" package="info5100.university.example.CourseSchedule" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="coursecatalog" type="CourseCatalog" visibility="package"/>
+        <Field name="schedule" type="ArrayList&lt;CourseOffer&gt;" visibility="package"/>
+        <Field name="semester" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="s"/>
+          <Argument type="CourseCatalog" name="cc"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSchedule" returnType="ArrayList&lt;CourseOffer&gt;" visibility="public"/>
+        <Method name="setSchedule" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;CourseOffer&gt;" name="schedule"/>
+        </Method>
+        <Method name="newCourseOffer" returnType="CourseOffer" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="getCourseOfferByNumber" returnType="CourseOffer" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="calculateTotalRevenues" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Seat" package="info5100.university.example.CourseSchedule" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="occupied" type="Boolean" visibility="package"/>
+        <Field name="number" type="int" visibility="package"/>
+        <Field name="seatassignment" type="SeatAssignment" visibility="package"/>
+        <Field name="courseoffer" type="CourseOffer" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CourseOffer" name="co"/>
+          <Argument type="int" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isOccupied" returnType="Boolean" visibility="public"/>
+        <Method name="newSeatAssignment" returnType="SeatAssignment" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SeatAssignment" package="info5100.university.example.CourseSchedule" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="seat" type="Seat" visibility="package"/>
+        <Field name="courseload" type="CourseLoad" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CourseLoad" name="cl"/>
+          <Argument type="Seat" name="s"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="assignSeatToStudent" returnType="void" visibility="public">
+          <Argument type="CourseLoad" name="cl"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Calendar" package="info5100.university.example.Department" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="mastercatalog" type="HashMap&lt;String, CourseSchedule&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addCourseSchedule" returnType="void" visibility="public">
+          <Argument type="String" name="semester"/>
+          <Argument type="CourseSchedule" name="cs"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Department" package="info5100.university.example.Department" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="coursecatalog" type="CourseCatalog" visibility="package"/>
+        <Field name="persondirectory" type="PersonDirectory" visibility="package"/>
+        <Field name="studentdirectory" type="StudentDirectory" visibility="package"/>
+        <Field name="facultydirectory" type="FacultyDirectory" visibility="package"/>
+        <Field name="mastercoursecatalog" type="HashMap&lt;String, CourseSchedule&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMastercoursecatalog" returnType="HashMap&lt;String, CourseSchedule&gt;" visibility="public"/>
+        <Method name="getPersonDirectory" returnType="PersonDirectory" visibility="public"/>
+        <Method name="getDepartmentName" returnType="String" visibility="public"/>
+        <Method name="getStudentDirectory" returnType="StudentDirectory" visibility="public"/>
+        <Method name="newCourseSchedule" returnType="CourseSchedule" visibility="public">
+          <Argument type="String" name="semester"/>
+        </Method>
+        <Method name="getCourseSchedule" returnType="CourseSchedule" visibility="public">
+          <Argument type="String" name="semester"/>
+        </Method>
+        <Method name="getCourseCatalog" returnType="CourseCatalog" visibility="public"/>
+        <Method name="newCourse" returnType="Course" visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="nm"/>
+          <Argument type="int" name="cr"/>
+        </Method>
+        <Method name="calculateRevenuesBySemester" returnType="int" visibility="public">
+          <Argument type="String" name="semester"/>
+        </Method>
+        <Method name="RegisterForAClass" returnType="void" visibility="public">
+          <Argument type="String" name="studentid"/>
+          <Argument type="String" name="cn"/>
+          <Argument type="String" name="semester"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmployerDirectory" package="info5100.university.example.Employer" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="employerlist" type="ArrayList&lt;EmployerProfile&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Department" name="d"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="newEmployerProfile" returnType="EmployerProfile" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="findTeachingFaculty" returnType="EmployerProfile" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmployerProfile" package="info5100.university.example.Employer" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="employments" type="ArrayList&lt;Employment&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isMatch" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Info5001UniversityExample" package="info5100.university.example" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Employment" package="info5100.university.example.Persona.EmploymentHistory" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="relevantcourseoffers" type="ArrayList&lt;CourseOffer&gt;" visibility="package"/>
+        <Field name="weight" type="int" visibility="package"/>
+        <Field name="quality" type="String" visibility="package"/>
+        <Field name="job" type="String" visibility="package"/>
+        <Field name="nextemplyment" type="Employment" visibility="package"/>
+        <Field name="employer" type="EmployerProfile" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="j"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="EmploymentHistroy" package="info5100.university.example.Persona.EmploymentHistory" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="employments" type="ArrayList&lt;Employment&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="newEmployment" returnType="Employment" visibility="public">
+          <Argument type="String" name="job"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FacultyAssignment" package="info5100.university.example.Persona.Faculty" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="courseoffer" type="CourseOffer" visibility="package"/>
+        <Field name="facultyprofile" type="FacultyProfile" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FacultyProfile" name="fp"/>
+          <Argument type="CourseOffer" name="co"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFacultyProfile" returnType="FacultyProfile" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FacultyDirectory" package="info5100.university.example.Persona.Faculty" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="teacherlist" type="ArrayList&lt;FacultyProfile&gt;" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getTeacherlist" returnType="ArrayList&lt;FacultyProfile&gt;" visibility="public" isStatic="true"/>
+        <Method name="setTeacherlist" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;FacultyProfile&gt;" name="teacherlist"/>
+        </Method>
+        <Method name="findTeachingFaculty" returnType="FacultyProfile" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="addFaculty" returnType="void" visibility="public" isStatic="true">
+          <Argument type="FacultyProfile" name="fp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FacultyProfile" package="info5100.university.example.Persona.Faculty" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="facultyName" type="String" visibility="package"/>
+        <Field name="person" type="Person" visibility="package"/>
+        <Field name="facultyassignments" type="ArrayList&lt;FacultyAssignment&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFacultyName" returnType="String" visibility="public"/>
+        <Method name="setFacultyName" returnType="void" visibility="public">
+          <Argument type="String" name="facultyName"/>
+        </Method>
+        <Method name="AssignAsTeacher" returnType="FacultyAssignment" visibility="public">
+          <Argument type="CourseOffer" name="co"/>
+        </Method>
+        <Method name="getCourseOffer" returnType="FacultyProfile" visibility="public">
+          <Argument type="String" name="courseid"/>
+        </Method>
+        <Method name="isMatch" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Person" package="info5100.university.example.Persona" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="id" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPersonId" returnType="String" visibility="public"/>
+        <Method name="isMatch" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PersonDirectory" package="info5100.university.example.Persona" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="personlist" type="ArrayList&lt;Person&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="newPerson" returnType="Person" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="findPerson" returnType="Person" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentAccount" package="info5100.university.example.Persona" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="StudentDirectory" package="info5100.university.example.Persona" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="studentlist" type="ArrayList&lt;StudentProfile&gt;" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getStudentlist" returnType="ArrayList&lt;StudentProfile&gt;" visibility="public" isStatic="true"/>
+        <Method name="setStudentlist" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;StudentProfile&gt;" name="studentlist"/>
+        </Method>
+        <Method name="findStudent" returnType="StudentProfile" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="studentExists" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="addStudentToDirectory" returnType="void" visibility="public" isStatic="true">
+          <Argument type="StudentProfile" name="sp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentProfile" package="info5100.university.example.Persona" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="studentName" type="String" visibility="package"/>
+        <Field name="studentId" type="String" visibility="package"/>
+        <Field name="person" type="Person" visibility="package"/>
+        <Field name="transcript" type="Transcript" visibility="package"/>
+        <Field name="employmenthistory" type="EmploymentHistroy" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="sName"/>
+          <Argument type="String" name="sId"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getStudentName" returnType="String" visibility="public"/>
+        <Method name="setStudentName" returnType="void" visibility="public">
+          <Argument type="String" name="studentName"/>
+        </Method>
+        <Method name="getStudentId" returnType="String" visibility="public"/>
+        <Method name="setStudentId" returnType="void" visibility="public">
+          <Argument type="String" name="studentId"/>
+        </Method>
+        <Method name="isMatch" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getCourseLoadBySemester" returnType="CourseLoad" visibility="public">
+          <Argument type="String" name="semester"/>
+        </Method>
+        <Method name="getCurrentCourseLoad" returnType="CourseLoad" visibility="public"/>
+        <Method name="newCourseLoad" returnType="CourseLoad" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Transcript" package="info5100.university.example.Persona" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="courseloadlist" type="HashMap&lt;String, CourseLoad&gt;" visibility="package"/>
+        <Field name="currentcourseload" type="CourseLoad" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="newCourseLoad" returnType="CourseLoad" visibility="public">
+          <Argument type="String" name="sem"/>
+        </Method>
+        <Method name="getCurrentCourseLoad" returnType="CourseLoad" visibility="public"/>
+        <Method name="getCourseLoadBySemester" returnType="CourseLoad" visibility="public">
+          <Argument type="String" name="semester"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="University" package="info5100.university.example.university" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields>
+        <Field name="universityName" type="String" visibility="package"/>
+        <Field name="collegeList" type="ArrayList&lt;College&gt;" visibility="package"/>
+        <Field name="departmentList" type="ArrayList&lt;Department&gt;" visibility="package"/>
+        <Field name="college" type="College" visibility="package"/>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="mastercoursecatalog" type="HashMap&lt;String, CourseSchedule&gt;" visibility="package"/>
+        <Field name="facutlyProfile" type="FacultyProfile" visibility="package"/>
+        <Field name="facutlyDirectory" type="FacultyDirectory" visibility="package"/>
+        <Field name="courseOffer" type="CourseOffer" visibility="package"/>
+        <Field name="course" type="Course" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="universityName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUniversityName" returnType="String" visibility="public"/>
+        <Method name="setUniversityName" returnType="void" visibility="public">
+          <Argument type="String" name="universityName"/>
+        </Method>
+        <Method name="getCollegeList" returnType="ArrayList&lt;College&gt;" visibility="public"/>
+        <Method name="setCollegeList" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;College&gt;" name="collegeList"/>
+        </Method>
+        <Method name="addNewCollege" returnType="void" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="getDepartmenList" returnType="ArrayList&lt;Department&gt;" visibility="public">
+          <Argument type="String" name="collegeName"/>
+        </Method>
+        <Method name="addDepartment" returnType="void" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="dept"/>
+        </Method>
+        <Method name="addNewCourse" returnType="void" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="departmentName"/>
+          <Argument type="String" name="courseName"/>
+          <Argument type="String" name="courseNo"/>
+          <Argument type="int" name="credits"/>
+        </Method>
+        <Method name="viewCourseCatalog" returnType="ArrayList&lt;Course&gt;" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="departmentName"/>
+        </Method>
+        <Method name="viewSemesters" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="departmentName"/>
+        </Method>
+        <Method name="addSemester" returnType="void" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="departmentName"/>
+          <Argument type="String" name="semester"/>
+        </Method>
+        <Method name="scheduleCourse" returnType="void" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="departmentName"/>
+          <Argument type="String" name="semester"/>
+          <Argument type="String" name="courseName"/>
+          <Argument type="String" name="faculty"/>
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="getCoursesOffered" returnType="ArrayList&lt;CourseOffer&gt;" visibility="public">
+          <Argument type="String" name="collegeName"/>
+          <Argument type="String" name="departmentName"/>
+          <Argument type="String" name="semester"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminPortal" package="ui.administrator" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Fields>
+        <Field name="department" type="Department" visibility="package"/>
+        <Field name="university" type="University" visibility="package"/>
+        <Field name="college" type="College" visibility="package"/>
+        <Field name="facultyprofile" type="FacultyProfile" visibility="package"/>
+        <Field name="facultydirectory" type="FacultyDirectory" visibility="package"/>
+        <Field name="studentProfile" type="StudentProfile" visibility="package"/>
+        <Field name="studentDirectory" type="StudentDirectory" visibility="package"/>
+        <Field name="addDeptList" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="btnAddDepartment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAddFaculty" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAddSchedule" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAddSem" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAddToCatalog" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAddcolleges" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnGenerateReports" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnGetClgDirectory" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnGetDirectoryList" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnGetStudentDirectory" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSearchCourses" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSemUpdt" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnStudentAdd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnViewCatalog" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="clgDirDptMgmt" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="courseData" type="javax.swing.JTable" visibility="private"/>
+        <Field name="courseListSchdMgmt" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="facultyDirectoryList" type="javax.swing.JTable" visibility="private"/>
+        <Field name="facultyList" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="financialData" type="javax.swing.JTable" visibility="private"/>
+        <Field name="getClgDir" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="getDepartment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel24" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel25" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel26" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel27" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel28" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel31" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel35" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel36" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelAdd_Fac" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelAdd_Std" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelCollege_Directory" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelCourse" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelDep_Dir" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelFac_Dir" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelSem_Updt" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanelStd_Dir" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Analytics" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Course_Management" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Directories" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Schedule_Management" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_University_Management" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane6" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTabbedPane_Admin" type="javax.swing.JTabbedPane" visibility="private"/>
+        <Field name="listClgSemUpdate" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="listCmCatalog" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="listCorseMgmtDpmtList" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="listCourseMgmtClg" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="listDpmtSemUdt" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="listSemUpt" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="schdlMgmtGetSchedule" type="javax.swing.JButton" visibility="private"/>
+        <Field name="scheduleMgmtClgList" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="scheduleMgtDpmtList" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="scheduleSemList" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="studentDirList" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tblSchedule" type="javax.swing.JTable" visibility="private"/>
+        <Field name="txtAddCollege" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAddDept" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAddFaculty" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCMCourseNo" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCMcourseName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCMcr" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNoOfSeats" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtSemUpdt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtStudentId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtStudentName" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="University" name="university"/>
+          <Argument type="FacultyDirectory" name="fd"/>
+          <Argument type="StudentDirectory" name="sd"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="txtCMcourseNameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddToCatalogActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnViewCatalogActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtAddCollegeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddDepartmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="addDeptListActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnGetClgDirectoryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddcollegesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="getDepartmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="clgDirDptMgmtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="scheduleMgmtClgListActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="scheduleMgtDpmtListActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="schdlMgmtGetScheduleActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="listCourseMgmtClgActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchCoursesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSemUpdtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="listClgSemUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="listDpmtSemUdtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddSemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="courseListSchdMgmtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtStudentNameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddFacultyActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="scheduleSemListActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddScheduleActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnGetDirectoryListActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnStudentAddActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnGetStudentDirectoryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="listCorseMgmtDpmtListActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="listSemUptActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtAddFacultyActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnGenerateReportsActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmployerLogin" package="ui.administrator" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="ed" type="EmployerDirectory" visibility="package"/>
+        <Field name="jp" type="JobPostings" visibility="package"/>
+        <Field name="userProcessContainer" type="JPanel" visibility="package"/>
+        <Field name="jd" type="JobDetails" visibility="package"/>
+        <Field name="university" type="University" visibility="package"/>
+        <Field name="EmployerLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="SelectEmployer" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmployerDirectory" name="ed"/>
+          <Argument type="University" name="university"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+        <Constructor visibility="package">
+          <Argument type="University" name="university"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="SelectEmployerActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="getSelectEmployer" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="EmployerLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="populateCombo" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Home" package="ui.administrator" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="studentDirectory" type="StudentDirectory" visibility="package"/>
+        <Field name="facultyDirectory" type="FacultyDirectory" visibility="package"/>
+        <Field name="university" type="University" visibility="package"/>
+        <Field name="btnAdmin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnEmployer" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnStudent" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jList1" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jSplitPane1" type="javax.swing.JSplitPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnAdminActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnStudentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnEmployerActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JobPostings" package="UI" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Fields>
+        <Field name="ed" type="EmployerDirectory" visibility="package"/>
+        <Field name="el" type="EmployerLogin" visibility="package"/>
+        <Field name="userProcessContainer" type="JPanel" visibility="package"/>
+        <Field name="jd" type="JobDetails" visibility="package"/>
+        <Field name="jo" type="JobDetailsList" visibility="package"/>
+        <Field name="CompanyName" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="PostJob" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ViewJob" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPosting" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmployerLogin" name="el"/>
+        </Constructor>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="JPanel" name="userProcessContainer"/>
+          <Argument type="JobDetails" name="jd"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="ViewJobActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="getTableValue" returnType="String" visibility="public"/>
+        <Method name="PostJobActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="populateTable" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="PostJob" package="UI" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Fields>
+        <Field name="userProcessContainer" type="JPanel" visibility="package"/>
+        <Field name="jd" type="JobDetails" visibility="package"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jobPay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jobReq" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jobTitle" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jobType" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="postJob" type="javax.swing.JButton" visibility="private"/>
+        <Field name="postNum" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JPanel" name="upc"/>
+          <Argument type="JobDetails" name="jt"/>
+        </Constructor>
+        <Constructor visibility="package">
+          <Argument type="JPanel" name="userProcessContainer"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="postJobActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Student" package="ui.administrator" visibility="public" xPosition="320.0" yPosition="1620.0">
+      <Fields>
+        <Field name="university" type="University" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="listColleges" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="University" name="university"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="listCollegesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentPortal" package="ui.administrator" visibility="public" xPosition="620.0" yPosition="1620.0">
+      <Fields>
+        <Field name="university" type="University" visibility="package"/>
+        <Field name="studentDirectory" type="StudentDirectory" visibility="package"/>
+        <Field name="btn_Drop_Course" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_Enroll" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_Get_College" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_Get_Data" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_Verify" type="javax.swing.JButton" visibility="private"/>
+        <Field name="combo_College" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="combo_Department" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="combo_Semester" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel_Course" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Finance" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Home" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_Job" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel_StudentProfile" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTabbedPane_Student" type="javax.swing.JTabbedPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable3" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable4" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable5" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable_Courses_Available" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTxtField_Course_Load" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTxtField_Gpa" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTxtField_Job_Offers" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTxtField_Name" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTxtField_StudentID" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="University" name="university"/>
+          <Argument type="StudentDirectory" name="sd"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="combo_DepartmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTxtField_Course_LoadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTxtField_Job_OffersActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_VerifyActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="combo_CollegeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="combo_SemesterActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_Get_CollegeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_Get_DataActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_EnrollActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ViewJobPost" package="UI" visibility="public" xPosition="920.0" yPosition="1620.0">
+      <Fields>
+        <Field name="userProcessContainer" type="JPanel" visibility="package"/>
+        <Field name="jd" type="JobDetails" visibility="package"/>
+        <Field name="js" type="JobPostings" visibility="package"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jobPay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jobReq" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jobTitle" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jobType" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="viewApp" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JPanel" name="upc"/>
+          <Argument type="JobDetails" name="j"/>
+        </Constructor>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getJobTitle" returnType="JTextField" visibility="public"/>
+        <Method name="setJobTitle" returnType="void" visibility="public">
+          <Argument type="JTextField" name="jobTitle"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="viewAppActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jobTitleActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ViewStudentProfiles" package="UI" visibility="public" xPosition="1220.0" yPosition="1620.0">
+      <Fields>
+        <Field name="userProcessContainer" type="JPanel" visibility="package"/>
+        <Field name="jd" type="JobDetails" visibility="package"/>
+        <Field name="js" type="JobDetailsList" visibility="package"/>
+        <Field name="jp" type="JobPostings" visibility="package"/>
+        <Field name="vp" type="ViewJobPost" visibility="package"/>
+        <Field name="jEmployButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jRejectButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jStudentsCombo" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jTextArea1" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JPanel" name="upc"/>
+          <Argument type="JobDetailsList" name="je"/>
+          <Argument type="JobDetails" name="ji"/>
+        </Constructor>
+        <Constructor visibility="package">
+          <Argument type="JPanel" name="upc"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jStudentsComboActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jEmployButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jRejectButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="populateApplication" returnType="void" visibility="private"/>
+        <Method name="populateCombo" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="coursecatalog" source="info5100.university.example.Department.Department" target="info5100.university.example.CourseCatalog.CourseCatalog" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="studentlist" source="info5100.university.example.Persona.StudentDirectory" target="info5100.university.example.Persona.StudentProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;StudentProfile&gt;"/>
+    <UseRelation source="info5100.university.example.Persona.Faculty.FacultyProfile" target="info5100.university.example.Persona.Faculty.FacultyAssignment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="university" source="ui.administrator.AdminPortal" target="info5100.university.example.university.University" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.Seat" target="info5100.university.example.CourseSchedule.SeatAssignment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="university" source="ui.administrator.EmployerLogin" target="info5100.university.example.university.University" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="seat" source="info5100.university.example.CourseSchedule.SeatAssignment" target="info5100.university.example.CourseSchedule.Seat" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Persona.Faculty.FacultyProfile" target="info5100.university.example.Persona.Faculty.FacultyProfile" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Department.Department" target="info5100.university.example.Persona.PersonDirectory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="university" source="ui.administrator.Student" target="info5100.university.example.university.University" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="employments" source="info5100.university.example.Persona.EmploymentHistory.EmploymentHistroy" target="info5100.university.example.Persona.EmploymentHistory.Employment" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Employment&gt;"/>
+    <UseRelation source="info5100.university.example.university.University" target="info5100.university.example.CourseSchedule.CourseOffer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseCatalog.CourseCatalog" target="info5100.university.example.CourseCatalog.Course" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.university.University" target="info5100.university.example.CourseCatalog.Course" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jd" source="UI.ViewJobPost" target="Model.JobDetails" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="departmentList" source="info5100.university.example.university.University" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Department&gt;"/>
+    <HasRelation name="facultyprofile" source="ui.administrator.AdminPortal" target="info5100.university.example.Persona.Faculty.FacultyProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="schedule" source="info5100.university.example.CourseSchedule.CourseSchedule" target="info5100.university.example.CourseSchedule.CourseOffer" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;CourseOffer&gt;"/>
+    <UseRelation source="info5100.university.example.Department.Calendar" target="info5100.university.example.CourseSchedule.CourseSchedule" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="js" source="UI.ViewStudentProfiles" target="Model.JobDetailsList" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="JobDetailsList"/>
+    <HasRelation name="department" source="info5100.university.example.Persona.StudentDirectory" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="courseloadlist" source="info5100.university.example.Persona.Transcript" target="info5100.university.example.CourseSchedule.CourseLoad" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, CourseLoad&gt;"/>
+    <UseRelation source="info5100.university.example.Persona.StudentProfile" target="info5100.university.example.CourseSchedule.CourseLoad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="studentdirectory" source="info5100.university.example.Department.Department" target="info5100.university.example.Persona.StudentDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="facultyprofile" source="info5100.university.example.Persona.Faculty.FacultyAssignment" target="info5100.university.example.Persona.Faculty.FacultyProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="university" source="ui.administrator.Home" target="info5100.university.example.university.University" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ea" source="Model.JobDetailsList" target="info5100.university.example.Employer.EmployerDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;EmployerDirectory, ArrayList&lt;JobDetails&gt;&gt;"/>
+    <HasRelation name="courseoffer" source="info5100.university.example.Persona.Faculty.FacultyAssignment" target="info5100.university.example.CourseSchedule.CourseOffer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="js" source="UI.ViewJobPost" target="UI.JobPostings" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mastercoursecatalog" source="info5100.university.example.university.University" target="info5100.university.example.CourseSchedule.CourseSchedule" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, CourseSchedule&gt;"/>
+    <HasRelation name="studentDirectory" source="ui.administrator.StudentPortal" target="info5100.university.example.Persona.StudentDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="facutlyDirectory" source="info5100.university.example.university.University" target="info5100.university.example.Persona.Faculty.FacultyDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="collegeMap" source="info5100.university.example.college.College" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, ArrayList&lt;Department&gt;&gt;"/>
+    <HasRelation name="seatlist" source="info5100.university.example.CourseSchedule.CourseOffer" target="info5100.university.example.CourseSchedule.Seat" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Seat&gt;"/>
+    <HasRelation name="employments" source="info5100.university.example.Employer.EmployerProfile" target="info5100.university.example.Persona.EmploymentHistory.Employment" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Employment&gt;"/>
+    <HasRelation name="jp" source="ui.administrator.EmployerLogin" target="UI.JobPostings" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Persona.EmploymentHistory.EmploymentHistroy" target="info5100.university.example.Persona.EmploymentHistory.Employment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="relevantcourseoffers" source="info5100.university.example.Persona.EmploymentHistory.Employment" target="info5100.university.example.CourseSchedule.CourseOffer" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;CourseOffer&gt;"/>
+    <UseRelation source="info5100.university.example.university.University" target="info5100.university.example.Department.Department" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="person" source="info5100.university.example.Persona.Faculty.FacultyProfile" target="info5100.university.example.Persona.Person" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="collegeList" source="info5100.university.example.university.University" target="info5100.university.example.college.College" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;College&gt;"/>
+    <HasRelation name="jd" source="UI.PostJob" target="Model.JobDetails" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ed" source="ui.administrator.EmployerLogin" target="info5100.university.example.Employer.EmployerDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.CourseLoad" target="info5100.university.example.CourseSchedule.SeatAssignment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="studentDirectory" source="ui.administrator.Home" target="info5100.university.example.Persona.StudentDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="courseoffer" source="info5100.university.example.CourseSchedule.Seat" target="info5100.university.example.CourseSchedule.CourseOffer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="employerlist" source="info5100.university.example.Employer.EmployerDirectory" target="info5100.university.example.Employer.EmployerProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;EmployerProfile&gt;"/>
+    <HasRelation name="facultyassignments" source="info5100.university.example.Persona.Faculty.FacultyProfile" target="info5100.university.example.Persona.Faculty.FacultyAssignment" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;FacultyAssignment&gt;"/>
+    <HasRelation name="courseload" source="info5100.university.example.CourseSchedule.SeatAssignment" target="info5100.university.example.CourseSchedule.CourseLoad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="person" source="info5100.university.example.Persona.StudentProfile" target="info5100.university.example.Persona.Person" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="personlist" source="info5100.university.example.Persona.PersonDirectory" target="info5100.university.example.Persona.Person" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Person&gt;"/>
+    <UseRelation source="info5100.university.example.Persona.Faculty.FacultyDirectory" target="info5100.university.example.Persona.Faculty.FacultyProfile" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="college" source="info5100.university.example.university.University" target="info5100.university.example.college.College" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="departmentList" source="info5100.university.example.college.College" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Department&gt;"/>
+    <HasRelation name="department" source="ui.administrator.AdminPortal" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jd" source="UI.ViewStudentProfiles" target="Model.JobDetails" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jp" source="UI.ViewStudentProfiles" target="UI.JobPostings" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Persona.StudentDirectory" target="ui.administrator.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="department" source="info5100.university.example.college.College" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="facutlyProfile" source="info5100.university.example.university.University" target="info5100.university.example.Persona.Faculty.FacultyProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="seatassignment" source="info5100.university.example.CourseSchedule.Seat" target="info5100.university.example.CourseSchedule.SeatAssignment" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Persona.Faculty.FacultyAssignment" target="info5100.university.example.Persona.Faculty.FacultyProfile" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ed" source="UI.JobPostings" target="info5100.university.example.Employer.EmployerDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.college.College" target="info5100.university.example.Department.Department" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.CourseOffer" target="info5100.university.example.CourseSchedule.Seat" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.CourseOffer" target="info5100.university.example.CourseSchedule.SeatAssignment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.SeatAssignment" target="info5100.university.example.CourseSchedule.CourseLoad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="coursecatalog" source="info5100.university.example.CourseSchedule.CourseSchedule" target="info5100.university.example.CourseCatalog.CourseCatalog" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Department.Department" target="ui.administrator.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="department" source="info5100.university.example.Persona.Faculty.FacultyDirectory" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Persona.Transcript" target="info5100.university.example.CourseSchedule.CourseLoad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.JobDetailsList" target="info5100.university.example.Employer.EmployerDirectory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Department.Department" target="info5100.university.example.CourseSchedule.CourseSchedule" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Department.Department" target="info5100.university.example.CourseCatalog.CourseCatalog" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jd" source="ui.administrator.EmployerLogin" target="Model.JobDetails" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="college" source="ui.administrator.AdminPortal" target="info5100.university.example.college.College" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="facultyDirectory" source="ui.administrator.Home" target="info5100.university.example.Persona.Faculty.FacultyDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Department.Department" target="info5100.university.example.CourseCatalog.Course" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="courseOffer" source="info5100.university.example.university.University" target="info5100.university.example.CourseSchedule.CourseOffer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="transcript" source="info5100.university.example.Persona.StudentProfile" target="info5100.university.example.Persona.Transcript" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="department" source="info5100.university.example.university.University" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ja" source="Model.JobDetailsList" target="Model.JobDetails" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;JobDetails&gt;"/>
+    <HasRelation name="department" source="info5100.university.example.Employer.EmployerDirectory" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persondirectory" source="info5100.university.example.Department.Department" target="info5100.university.example.Persona.PersonDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="university" source="ui.administrator.StudentPortal" target="info5100.university.example.university.University" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mastercatalog" source="info5100.university.example.Department.Calendar" target="info5100.university.example.CourseSchedule.CourseSchedule" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, CourseSchedule&gt;"/>
+    <HasRelation name="el" source="UI.JobPostings" target="ui.administrator.EmployerLogin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="seatassignments" source="info5100.university.example.CourseSchedule.CourseLoad" target="info5100.university.example.CourseSchedule.SeatAssignment" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;SeatAssignment&gt;"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.CourseSchedule" target="info5100.university.example.CourseSchedule.CourseOffer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="department" source="info5100.university.example.CourseCatalog.CourseCatalog" target="info5100.university.example.Department.Department" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="courselist" source="info5100.university.example.CourseCatalog.CourseCatalog" target="info5100.university.example.CourseCatalog.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Course&gt;"/>
+    <HasRelation name="facultyassignment" source="info5100.university.example.CourseSchedule.CourseOffer" target="info5100.university.example.Persona.Faculty.FacultyAssignment" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.university.University" target="info5100.university.example.college.College" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.JobDetailsList" target="Model.JobDetails" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mastercoursecatalog" source="info5100.university.example.Department.Department" target="info5100.university.example.CourseSchedule.CourseSchedule" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, CourseSchedule&gt;"/>
+    <HasRelation name="employmenthistory" source="info5100.university.example.Persona.StudentProfile" target="info5100.university.example.Persona.EmploymentHistory.EmploymentHistroy" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.CourseSchedule.CourseOffer" target="info5100.university.example.Persona.Faculty.FacultyProfile" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nextemplyment" source="info5100.university.example.Persona.EmploymentHistory.Employment" target="info5100.university.example.Persona.EmploymentHistory.Employment" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jo" source="UI.JobPostings" target="Model.JobDetailsList" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="JobDetailsList"/>
+    <HasRelation name="jd" source="UI.JobPostings" target="Model.JobDetails" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Employer.EmployerDirectory" target="info5100.university.example.Employer.EmployerProfile" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="studentProfile" source="ui.administrator.AdminPortal" target="info5100.university.example.Persona.StudentProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="course" source="info5100.university.example.CourseSchedule.CourseOffer" target="info5100.university.example.CourseCatalog.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="info5100.university.example.Persona.PersonDirectory" target="info5100.university.example.Persona.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="teacherlist" source="info5100.university.example.Persona.Faculty.FacultyDirectory" target="info5100.university.example.Persona.Faculty.FacultyProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;FacultyProfile&gt;"/>
+    <HasRelation name="facultydirectory" source="info5100.university.example.Department.Department" target="info5100.university.example.Persona.Faculty.FacultyDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="course" source="info5100.university.example.university.University" target="info5100.university.example.CourseCatalog.Course" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="studentDirectory" source="ui.administrator.AdminPortal" target="info5100.university.example.Persona.StudentDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vp" source="UI.ViewStudentProfiles" target="UI.ViewJobPost" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="employer" source="info5100.university.example.Persona.EmploymentHistory.Employment" target="info5100.university.example.Employer.EmployerProfile" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="facultydirectory" source="ui.administrator.AdminPortal" target="info5100.university.example.Persona.Faculty.FacultyDirectory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="currentcourseload" source="info5100.university.example.Persona.Transcript" target="info5100.university.example.CourseSchedule.CourseLoad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
